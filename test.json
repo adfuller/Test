@@ -27,9 +27,9 @@
       "type": "setElementText",
       "locator": {
         "type": "id",
-        "value": "gbqfq"
+        "value": "gbq"
       },
-      "text": "test"
+      "text": "tesy"
     },
     {
       "type": "clickElement",
