@@ -1,42 +1,202 @@
-{
-  "type": "script",
-  "seleniumVersion": "2",
-  "formatVersion": 1,
-  "steps": [
-    {
-      "type": "get",
-      "url": "https://www.google.co.uk/"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "gbqfq"
-      },
-      "text": "sdfsdf"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "gbqfq"
-      },
-      "text": "tset"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "gbq"
-      },
-      "text": "tesy"
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "id",
-        "value": "gbqfb"
-      }
-    }
-  ]
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.jomalone.co.uk" />
+<title>test.json</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test.json</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@class='main-nav-wrapper-v1']/ul/li[3]/div/div/div/div/div/div/div/div[4]/ul/li[1]/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add to Bag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=CONTINUE CHECKOUT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//form[@id='checkout_samples']/div[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--checkout_signin_new_user--field--GUEST_USER_EMAIL_ADDRESS</td>
+	<td>mphpctest@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checkout_signin_guest_user-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=form--address_shipping--field--TITLE</td>
+	<td>Mr.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--address_shipping--field--FIRST_NAME</td>
+	<td>matt</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--address_shipping--field--LAST_NAME</td>
+	<td>harris</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--address_shipping--field--PHONE1</td>
+	<td>02380111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=qas_postcode_1418309011416</td>
+	<td>po14 4fl</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='qas']/div[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='continue-btn']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@id='continue-btn']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=form--checkout_payment--field--card_type</td>
+	<td>American Express</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=form--checkout_payment--field--card_number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--checkout_payment--field--card_number</td>
+	<td>374291541991009</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=form--checkout_payment--field--expiration_month</td>
+	<td>09</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form--checkout_payment--field--card_cvn</td>
+	<td>8668</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=form--checkout_review--field--ACCEPTED_PRIVACY_POLICY</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn.place-order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.brdialog-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.content &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#confirmation-panel &gt; div.content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.content &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.content &gt; p</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
