@@ -1,0 +1,385 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "storeEval",
+      "script": "return Math.floor((Math.random()*999999)+1)",
+      "variable": "randusr"
+    },
+    {
+      "type": "get",
+      "url": "http://e.jomalone.uk.uk.stage.emea.elcdev.net/account/signin.tmpl?_SUBMIT=signout#"
+    },
+    {
+      "type": "get",
+      "url": "http://e.jomalone.uk.uk.stage.emea.elcdev.net/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "MY ACCOUNT"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Sign In"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "form--signin--field--EMAIL_ADDRESS"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--signin_new_user--field--NEW_USER_EMAIL_ADDRESS"
+      },
+      "text": "adamfullertest+${randusr}@gmail.com"
+    },
+    {
+      "type": "storeElementValue",
+      "locator": {
+        "type": "id",
+        "value": "form--signin_new_user--field--NEW_USER_EMAIL_ADDRESS"
+      },
+      "variable": "newuser"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "#signin_new_user > input.form-submit"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Create an Account"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='profile-form-container']/fieldset/div[1]/select//option[2]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--FIRST_NAME"
+      },
+      "text": "Adam"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--LAST_NAME"
+      },
+      "text": "Fuller"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PC_EMAIL_ADDRESS"
+      },
+      "text": "${newuser}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PC_EMAIL_ADDRESS2"
+      },
+      "text": "${newuser}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PASSWORD"
+      },
+      "text": "1234qwert"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='profile-form-container']/fieldset/div[7]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PASSWORD2"
+      },
+      "text": "1234qwert"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PASSWORD_HINT"
+      },
+      "text": "qwert"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "registration"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--qas_do_search--field--QAS_BUILDING"
+      },
+      "text": "3"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--qas_do_search--field--QAS_POSTCODE"
+      },
+      "text": "po14 4fl"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "QAS_SUBMIT"
+      }
+    },
+    {
+      "type": "waitForElementValue",
+      "locator": {
+        "type": "id",
+        "value": "form--address--field--ADDRESS1"
+      },
+      "value": "Estee Lauder, Unit 3"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "form--address--field--PHONE1"
+      },
+      "text": "07703025124"
+    },
+    {
+      "type": "setElementNotSelected",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PC_EMAIL_PROMOTIONS"
+      }
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--ACCEPTED_PRIVACY_POLICY"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div.submit_btn > input.form-submit"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Adam Fuller"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "ACCOUNT PROFILE"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Personal Information"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--FIRST_NAME"
+      },
+      "value": "Adam"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--LAST_NAME"
+      },
+      "value": "Fuller"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "id",
+        "value": "form--registration--field--PASSWORD_HINT"
+      },
+      "value": "qwert"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "ADDRESS BOOK"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "YOUR DEFAULT DELIVERY ADDRESS:"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Adam Fuller"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div.address_data"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Adam Fuller"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "PAYMENT INFORMATION"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Add Payment Method"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Adam Fuller"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "ORDERS"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Orders"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Orders"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "WISHLIST"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Wishlist"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "CONTINUE SHOPPING"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "RE-ORDER FROM PAST PURCHASES"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Re-order from Past Purchases"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "css selector",
+        "value": "a.continue-shopping > input.form-submit"
+      },
+      "value": "Continue Shopping"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "CHECK GIFT CARD BALANCE"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Check Gift Card Balance"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "GIFTCARD NUMBER"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "GIFTCARD PIN"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "id",
+        "value": "continue-btn"
+      },
+      "value": "View Balance"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "content"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "continue-btn"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "img.logo"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
